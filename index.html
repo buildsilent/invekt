@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invekt — X-Ray Any Company in 60 Seconds</title>
+<meta name="description" content="Enter any company domain. Get an instant AI intelligence report with a Signal Score. See what investors see — before you write the check. Free to start.">
+<meta property="og:title" content="Invekt — X-Ray Any Company in 60 Seconds">
+<meta property="og:description" content="Enter a domain. Get the truth. AI company intelligence that replaces $25K+ due diligence. Free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://invekt.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Invekt — X-Ray Any Company in 60 Seconds">
+<meta name="twitter:description" content="Enter a domain. Get the truth. Free AI company intelligence.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#09090b;--surface:#111113;--border:#27272a;--text:#fafafa;--text2:#a1a1aa;--accent:#22d3ee;--glow:rgba(34,211,238,.12);--warm:#f59e0b;--red:#ef4444}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(9,9,11,.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(39,39,42,.5)}
+.logo{font-size:1.35rem;font-weight:700;letter-spacing:-.02em}.logo span{color:var(--accent)}
+nav a{color:var(--text2);font-size:.875rem;font-weight:500;text-decoration:none;transition:color .2s}nav a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:var(--bg);padding:.5rem 1.25rem;border-radius:6px;font-weight:600;font-size:.8rem;letter-spacing:.02em;text-transform:uppercase}.nav-cta:hover{color:var(--bg)!important;opacity:.9}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 6rem;position:relative}
+.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,var(--glow) 0%,transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);border:1px solid var(--border);padding:.4rem 1rem;border-radius:100px;font-size:.8rem;color:var(--text2);margin-bottom:2rem;animation:fadeUp .8s ease both}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(2.8rem,7vw,5.5rem);line-height:1.05;font-weight:400;max-width:800px;margin-bottom:1.5rem;animation:fadeUp .8s ease .1s both}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-p{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--text2);max-width:560px;margin-bottom:3rem;animation:fadeUp .8s ease .2s both}
+.search-wrap{width:100%;max-width:580px;animation:fadeUp .8s ease .3s both}
+.search-box{display:flex;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.35rem .35rem .35rem 1.25rem;transition:border-color .3s,box-shadow .3s;cursor:pointer}
+.search-box:hover{border-color:rgba(34,211,238,.4);box-shadow:0 0 0 3px var(--glow)}
+.search-box .ph{flex:1;text-align:left;color:var(--text2);font-size:1.05rem;user-select:none}
+.search-btn{background:var(--accent);color:var(--bg);border:none;padding:.75rem 1.5rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;letter-spacing:.02em;text-transform:uppercase;transition:opacity .2s;white-space:nowrap}.search-btn:hover{opacity:.9}
+.hero-sub{margin-top:1rem;font-size:.875rem;color:var(--text2);animation:fadeUp .8s ease .4s both}.hero-sub strong{color:var(--warm)}
+.proof{display:flex;align-items:center;justify-content:center;gap:2rem;margin-top:2.5rem;flex-wrap:wrap;animation:fadeUp .8s ease .5s both}
+.proof-item{font-size:.85rem;color:var(--text2)}.proof-item strong{color:var(--text);font-weight:600}
+.trust-line{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trust-line p{font-size:1rem;color:var(--text2);max-width:700px;margin:0 auto;line-height:1.8}.trust-line strong{color:var(--text)}
+.section{padding:6rem 2rem;max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);margin-bottom:.75rem}
+.section h2{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin-bottom:1rem}
+.section h2 em{font-style:italic;color:var(--accent)}
+.section-sub{color:var(--text2);max-width:600px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
+.feature{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:border-color .3s,transform .3s}
+.feature:hover{border-color:var(--accent);transform:translateY(-2px)}
+.f-icon{width:40px;height:40px;border-radius:8px;background:var(--glow);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--accent);font-weight:700;font-size:.85rem}
+.feature h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
+.feature p{font-size:.9rem;color:var(--text2);line-height:1.6}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:3rem}
+.step{text-align:center;padding:1.5rem}
+.step-num{width:48px;height:48px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:var(--accent);margin-bottom:1rem}
+.step h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+.step p{font-size:.9rem;color:var(--text2)}
+.audience{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin-top:3rem}
+.aud-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center}
+.aud-card h4{font-size:.95rem;font-weight:600;margin-bottom:.35rem}
+.aud-card p{font-size:.8rem;color:var(--text2)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:3rem}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2rem;position:relative;transition:border-color .3s}
+.price-card.pop{border-color:var(--accent)}
+.price-card.pop::after{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--bg);font-size:.65rem;font-weight:700;letter-spacing:.1em;padding:.3rem .8rem;border-radius:100px}
+.price-name{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text2);margin-bottom:.5rem}
+.price-amount{font-size:2.5rem;font-weight:700;margin-bottom:.25rem}.price-amount span{font-size:1rem;font-weight:400;color:var(--text2)}
+.price-desc{font-size:.85rem;color:var(--text2);margin-bottom:1.5rem}
+.price-list{list-style:none;margin-bottom:1.5rem}
+.price-list li{font-size:.85rem;color:var(--text2);padding:.4rem 0;border-bottom:1px solid rgba(39,39,42,.5);display:flex;align-items:center;gap:.5rem}
+.price-list li::before{content:'→';color:var(--accent);font-weight:700}
+.price-btn{display:block;width:100%;padding:.75rem;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s;text-align:center;text-decoration:none}
+.price-btn:hover{border-color:var(--accent);color:var(--accent)}
+.price-card.pop .price-btn{background:var(--accent);color:var(--bg);border-color:var(--accent)}.price-card.pop .price-btn:hover{opacity:.9}
+.compare{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2.5rem;margin-top:4rem;text-align:center}
+.compare h3{font-size:1.15rem;font-weight:600;margin-bottom:.5rem}
+.compare>p{font-size:.9rem;color:var(--text2);margin-bottom:1.5rem}
+.compare-row{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;align-items:end}
+.compare-item{text-align:center}
+.compare-item .old{font-size:1.5rem;font-weight:700;color:var(--red);text-decoration:line-through}
+.compare-item .label{font-size:.8rem;color:var(--text2);margin-top:.35rem}
+.cta-section{text-align:center;padding:6rem 2rem 8rem;max-width:700px;margin:0 auto}
+.cta-section h2{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;margin-bottom:1rem}
+.cta-section h2 em{font-style:italic;color:var(--accent)}
+.cta-section>p{color:var(--text2);margin-bottom:2rem;font-size:1.05rem}
+.incentive{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);padding:.5rem 1.25rem;border-radius:8px;font-size:.85rem;color:var(--warm);font-weight:600;margin-bottom:2rem}
+.waitlist-form{display:flex;gap:.5rem;max-width:480px;margin:0 auto}
+.waitlist-form input[type="email"]{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.85rem 1.25rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;outline:none;transition:border-color .3s}
+.waitlist-form input[type="email"]:focus{border-color:var(--accent)}
+.waitlist-form input[type="email"]::placeholder{color:var(--text2)}
+.waitlist-form button{background:var(--accent);color:var(--bg);border:none;padding:.85rem 2rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .2s}.waitlist-form button:hover{opacity:.9}
+.waitlist-note{font-size:.8rem;color:var(--text2);margin-top:.75rem}
+#waitlist-msg{margin-top:1rem;font-size:.9rem;color:var(--accent);display:none}
+#waitlist-err{margin-top:1rem;font-size:.9rem;color:var(--red);display:none}
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.8rem;color:var(--text2)}footer a{color:var(--text2);text-decoration:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(24px);transition:all .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:640px){nav{padding:1rem}.hero{padding:7rem 1.25rem 4rem}.search-box{flex-direction:column;padding:1rem;gap:.75rem}.search-btn{width:100%}.waitlist-form{flex-direction:column}.waitlist-form button{width:100%}.compare-row{gap:1.5rem}.proof{gap:1rem}.pricing-grid{grid-template-columns:1fr}.audience{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">inv<span>e</span>kt</div>
+<div style="display:flex;gap:1.5rem;align-items:center">
+<a href="#features">Features</a>
+<a href="#pricing">Pricing</a>
+<a href="#waitlist" class="nav-cta">Get Early Access</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="badge"><span class="badge-dot"></span> Launching April 2026</div>
+<h1>X-ray any company<br>in <em>60 seconds.</em></h1>
+<p class="hero-p">Enter a domain. Get the truth. The same intelligence that costs investors $25,000+ per deal — yours in one click.</p>
+<div class="search-wrap">
+<div class="search-box" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">
+<span class="ph">Enter any company domain...</span>
+<button class="search-btn">Invekt It</button>
+</div>
+</div>
+<p class="hero-sub"><strong>Free to start.</strong> No credit card. No sales call.</p>
+<div class="proof">
+<div class="proof-item"><strong>60 sec</strong> per report</div>
+<div class="proof-item"><strong>Free</strong> to start</div>
+<div class="proof-item"><strong>97%</strong> less than PitchBook</div>
+</div>
+</section>
+
+<div class="trust-line reveal">
+<p>Right now, vetting a single company costs <strong>$25,000–$500,000</strong> in analyst time, consultant fees, and database subscriptions. Most of that work is someone Googling publicly available information and putting it in a deck. We do that in <strong>60 seconds</strong> — and we show you what it actually means.</p>
+</div>
+
+<section class="section reveal" id="features">
+<div class="section-label">What You Actually Get</div>
+<h2>Stop paying analysts to Google.<br><em>Start making faster calls.</em></h2>
+<p class="section-sub">Every report pulls real-time signals and tells you what they mean — not just what they are.</p>
+<div class="features">
+<div class="feature"><div class="f-icon">01</div><h3>See what they're really building</h3><p>Full tech stack breakdown — what frameworks they chose, what infrastructure they run, and what those decisions tell you about their stage, budget, and technical maturity.</p></div>
+<div class="feature"><div class="f-icon">02</div><h3>One number. Invest or walk.</h3><p>The Signal Score (0–100) synthesizes funding velocity, hiring momentum, web traction, and competitive position into a single number you can act on in seconds.</p></div>
+<div class="feature"><div class="f-icon">03</div><h3>Know their next move before they announce it</h3><p>Job postings reveal strategy before press releases. See who they're hiring, what roles are open, and what that signals about where the company is headed.</p></div>
+<div class="feature"><div class="f-icon">04</div><h3>See who's funding them and who's coming for them</h3><p>Full funding history, investor relationships, and competitive landscape — including the stealth competitors most databases miss entirely.</p></div>
+<div class="feature"><div class="f-icon">05</div><h3>Know if the market cares — or doesn't</h3><p>AI-processed news coverage and social sentiment tells you whether momentum is building or fading — before it shows up in the numbers.</p></div>
+<div class="feature"><div class="f-icon">06</div><h3>Track the $17 trillion shift happening right now</h3><p>Not just software. Robotics, supply chain AI, manufacturing automation, energy — the physical economy is getting AI'd and we surface those signals too.</p></div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="section-label">How It Works</div>
+<h2>Three steps. <em>No learning curve.</em></h2>
+<div class="steps">
+<div class="step"><div class="step-num">1</div><h3>Enter a domain</h3><p>Any company. Any industry. Type the website and hit scan. No account needed to start.</p></div>
+<div class="step"><div class="step-num">2</div><h3>We pull the signals</h3><p>Our AI scans dozens of real-time sources, cross-references the data, and synthesizes it into a single intelligence report.</p></div>
+<div class="step"><div class="step-num">3</div><h3>You make the call</h3><p>Signal Score. Risk flags. Hiring trends. Competitive map. Everything you need to decide — invest, pass, or dig deeper.</p></div>
+</div>
+</section>
+
+<section class="section reveal">
+<div class="section-label">Who This Is For</div>
+<h2>If you write checks, vet deals, or evaluate companies — <em>this is yours.</em></h2>
+<div class="audience">
+<div class="aud-card"><h4>Angel Investors</h4><p>Vet deals in minutes, not weeks.</p></div>
+<div class="aud-card"><h4>VC Firms</h4><p>Screen more, miss less, move first.</p></div>
+<div class="aud-card"><h4>PE & Family Offices</h4><p>Deep intel without the six-figure bill.</p></div>
+<div class="aud-card"><h4>Corp Dev & M&A</h4><p>Find targets before competitors do.</p></div>
+<div class="aud-card"><h4>Founders</h4><p>See how investors will score you before you pitch.</p></div>
+<div class="aud-card"><h4>Sales Teams</h4><p>Know everything about a prospect before the first call.</p></div>
+</div>
+</section>
+
+<section class="section reveal" id="pricing">
+<div class="section-label">Pricing</div>
+<h2>Pick the tier that matches <em>your deal flow.</em></h2>
+<div class="pricing-grid">
+<div class="price-card">
+<div class="price-name">Free</div>
+<div class="price-amount">$0</div>
+<div class="price-desc">Try it. No strings.</div>
+<ul class="price-list"><li>3 X-Ray scans per day</li><li>Signal Score (0–100)</li><li>Basic company overview</li><li>No signup required</li></ul>
+<a href="#waitlist" class="price-btn">Join Waitlist</a>
+</div>
+<div class="price-card">
+<div class="price-name">Scout</div>
+<div class="price-amount">$59<span>/mo</span></div>
+<div class="price-desc">For angels and solo scouts.</div>
+<ul class="price-list"><li>15 full reports / month</li><li>Save and revisit reports</li><li>Score change alerts</li><li>Export to PDF</li></ul>
+<a href="#waitlist" class="price-btn">Join Waitlist</a>
+</div>
+<div class="price-card pop">
+<div class="price-name">Pro</div>
+<div class="price-amount">$249<span>/mo</span></div>
+<div class="price-desc">For VC teams and fund managers.</div>
+<ul class="price-list"><li>75 full reports / month</li><li>Deep analysis + competitor maps</li><li>Portfolio monitoring</li><li>Weekly signal digest</li></ul>
+<a href="#waitlist" class="price-btn">Join Waitlist</a>
+</div>
+<div class="price-card">
+<div class="price-name">Fund</div>
+<div class="price-amount">$899<span>/mo</span></div>
+<div class="price-desc">For PE firms and family offices.</div>
+<ul class="price-list"><li>Unlimited reports</li><li>API access</li><li>Team sharing (5 seats)</li><li>Custom monitoring rules</li></ul>
+<a href="#waitlist" class="price-btn">Join Waitlist</a>
+</div>
+</div>
+<div class="compare">
+<h3>What companies pay right now for the same intelligence.</h3>
+<p>Traditional tools charge thousands. We charge a fraction.</p>
+<div class="compare-row">
+<div class="compare-item"><div class="old">$24,000/yr</div><div class="label">PitchBook (3 seats)</div></div>
+<div class="compare-item"><div class="old">$80,000/yr</div><div class="label">Junior Analyst</div></div>
+<div class="compare-item"><div class="old">$50,000+</div><div class="label">Per-deal DD</div></div>
+<div class="compare-item" style="border-left:2px solid var(--accent);padding-left:1.5rem"><div style="font-size:1.5rem;font-weight:700;color:var(--accent)">$59–$899/mo</div><div class="label">Invekt</div></div>
+</div>
+</div>
+</section>
+
+<section class="cta-section reveal" id="waitlist">
+<div class="section-label">Early Access</div>
+<h2>Be first to <em>Invekt.</em></h2>
+<div class="incentive">⚡ Early access members get 30 free X-Ray scans at launch</div>
+<p>We're opening the doors in April 2026. Drop your email — we'll let you in before everyone else.</p>
+<form class="waitlist-form" action="https://formspree.io/f/xojkyjlk" method="POST" onsubmit="handleSubmit(event)">
+<input type="email" name="email" placeholder="you@yourfund.com" required>
+<input type="hidden" name="source" value="invekt-waitlist">
+<input type="hidden" name="product" value="invekt">
+<button type="submit">Get Early Access</button>
+</form>
+<p class="waitlist-note">Your email stays between us. Period.</p>
+<div id="waitlist-msg">You're in. We'll reach out when it's time.</div>
+<div id="waitlist-err">Something went wrong. Try again or email hello@buildsilent.com</div>
+</section>
+
+<footer><p>&copy; 2026 Invekt &middot; A <a href="https://buildsilent.com">Build Silent</a> Product</p></footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function handleSubmit(e){e.preventDefault();const f=e.target,btn=f.querySelector('button');btn.textContent='Joining...';btn.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(r=>{if(r.ok){f.style.display='none';document.getElementById('waitlist-msg').style.display='block'}else{document.getElementById('waitlist-err').style.display='block';btn.textContent='Get Early Access';btn.disabled=false}}).catch(()=>{document.getElementById('waitlist-err').style.display='block';btn.textContent='Get Early Access';btn.disabled=false})}
+</script>
+</body>
+</html>
